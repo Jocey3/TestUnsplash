@@ -1,6 +1,7 @@
 package com.dev.jocey.testunsplash.api
 
 import com.dev.jocey.testunsplash.api.models.CollectionModel
+import io.reactivex.Flowable
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -11,5 +12,5 @@ interface ApiService {
     fun getPhotos(
         @Query("page") page: Int,
         @Query("per_page") perPage: Int
-    ): Observable<List<CollectionModel>>
+    ): Flowable<List<CollectionModel>>
 }
